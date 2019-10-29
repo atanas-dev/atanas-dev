@@ -1,0 +1,12 @@
+Options -Indexes
+
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)\.html$ /$1 [L,R=302]
+# RewriteRule ^(.*resume)\/?$ $1.html
+
+# One year
+<filesMatch ".(css|js|jpg|jpeg|png|gif|ico)$">
+	Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
