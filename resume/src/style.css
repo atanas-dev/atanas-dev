@@ -43,15 +43,6 @@ h3 {
 	@apply mt-2;
 }
 
-@screen print {
-	.container {
-		padding: 0 !important;
-		margin: 0 !important;
-		width: 100% !important;
-		max-width: 100% !important;
-	}
-}
-
 .languages-tools {
 	page-break-inside: avoid;
 }
@@ -70,12 +61,6 @@ h3 {
 
 	& + .resume-item {
 		@apply pt-4;
-	}
-}
-
-@screen md {
-	.resume-item {
-		@apply flex;
 	}
 }
 
@@ -120,4 +105,30 @@ h3 {
 
 .tags__tag {
 	@apply px-2 text-xs m-1 border-2 rounded-full;
+}
+
+
+@screen md {
+	.resume-item {
+		@apply flex;
+	}
+}
+
+@screen print {
+	.container {
+		padding: 0 !important;
+		margin: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+
+		& section + section {
+			@apply mt-6;
+		}
+	}
+	
+	.resume-item {
+		& + .resume-item {
+			@apply pt-3;
+		}
+	}
 }
