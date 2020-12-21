@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 html {
-	font-size: 14px;
+	font-size: 16px;
+}
+
+a {
+	@apply text-blue-500;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +103,14 @@ h3 {
 	}
 }
 
+.responsibilities {
+	@apply list-disc text-sm pl-6 my-2;
+}
+
+.responsibilities__item {
+	@apply mb-1;
+}
+
 .tags {
 	@apply flex flex-wrap -mx-1;
 }
@@ -107,7 +119,6 @@ h3 {
 	@apply px-2 text-xs m-1 border-2 rounded-full;
 }
 
-
 @screen md {
 	.resume-item {
 		@apply flex;
@@ -115,6 +126,10 @@ h3 {
 }
 
 @screen print {
+	html {
+		font-size: 14px;
+	}
+
 	.container {
 		padding: 0 !important;
 		margin: 0 !important;
