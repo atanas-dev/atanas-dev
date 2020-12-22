@@ -104,7 +104,7 @@ h3 {
 }
 
 .responsibilities {
-	@apply list-disc text-sm pl-6 my-2;
+	@apply list-disc text-xs pl-6 my-2 font-mono;
 }
 
 .responsibilities__item {
